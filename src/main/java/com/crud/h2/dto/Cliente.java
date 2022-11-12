@@ -52,16 +52,15 @@ public class Cliente  {
 	 * @param apellido
 	 * @param direccion
 	 * @param dni
-	 * @param fecha
 	 */
-	public Cliente(Long id, String nombre, String apellido, String direccion, int dni, Date fecha) {
+	public Cliente(Long id, String nombre, String apellido, String direccion, int dni) {
 		//super();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.direccion = direccion;
 		this.dni = dni;
-		this.fecha = fecha;
+		this.fecha = new Date();
 	}
 
 	
@@ -148,7 +147,7 @@ public class Cliente  {
 	 * @param fecha the fecha to set
 	 */
 	public void setFecha(Date fecha) {
-		this.fecha = fecha;
+		this.fecha = new Date();
 	}
 
 	
@@ -172,7 +171,7 @@ public class Cliente  {
 	@Override
 	public String toString() {
 		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", direccion=" + direccion
-				+ ", dni=" + dni + ", fecha=" + fecha + "]";
+				+ ", dni=" + dni + "]";
 	}
 	
 	
